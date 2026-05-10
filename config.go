@@ -217,7 +217,7 @@ func (pp proxyParser) ProxyHttp(val string) {
 
 // Parse method:passwd@server:port
 func parseMethodPasswdServer(val string) (method, passwd, server string, err error) {
-	// Use the right-most @ symbol to seperate method:passwd and server:port.
+	// Use the right-most @ symbol to separate method:passwd and server:port.
 	idx := strings.LastIndex(val, "@")
 	if idx == -1 {
 		err = errors.New("requires both encrypt method and password")
